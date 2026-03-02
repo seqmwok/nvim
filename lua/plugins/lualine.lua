@@ -9,7 +9,7 @@ return {
                 globalstatus = true,
                 component_separators = { left = '', right = '' },
                 section_separators = { left = '', right = '' },
-                disabled_filetypes = { statusline = { 'alpha', 'lazy', 'mason' } },
+                disabled_filetypes = { statusline = { 'alpha', 'lazy' } },
                 ignore_focus = { 'neo-tree' },
             },
             sections = {
@@ -19,13 +19,13 @@ return {
                 lualine_b = {
                     { 'branch', icon = '' },
                     { 'diff', symbols = { added = ' ', modified = ' ', removed = ' ' }, padding = { left = 1, right = 1 } },
-                    { 'diagnostics', symbols = { error = '󰅚 ', warn = '󰀪 ', info = '󰋽 ', hint = '󰌶 ' } },
+                    { 'diagnostics', symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' } },
                 },
                 lualine_c = {
                     { 'filename', path = 1, symbols = { modified = ' ', readonly = ' ', unnamed = '󰈔 ' } },
                 },
                 lualine_x = { 
-                    { 'filetype', icon_only = true }, 
+                    { 'filetype', icon_only = false }, 
                 },
                 lualine_y = {
                     { 'progress', padding = { left = 1, right = 1 } },
@@ -42,7 +42,7 @@ return {
                 lualine_y = {},
                 lualine_z = {},
             },
-            extensions = { 'neo-tree', 'lazy', 'toggleterm', 'mason' },
+            extensions = { 'neo-tree', 'lazy' },
         })
     end,
 }
