@@ -1,9 +1,9 @@
 local map = vim.keymap.set
 
 -- Discipline
-for _, key in ipairs({ '<Up>', '<Down>', '<Left>', '<Right>' }) do
-    map({ 'n', 'i', 'v' }, key, '<nop>', { silent = true })
-end
+-- for _, key in ipairs({ '<Up>', '<Down>', '<Left>', '<Right>' }) do
+--     map({ 'n', 'i', 'v' }, key, '<nop>', { silent = true })
+-- end
 
 -- Essentials
 map('n', ';', ':')
