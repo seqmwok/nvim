@@ -15,10 +15,10 @@ return {
         }
 
         for i = 1, 9 do
-            table.insert(keys, { 
-                "<leader>" .. i, 
-                "<cmd>BufferLineGoToBuffer " .. i .. "<cr>", 
-                desc = "Go to buffer " .. i 
+            table.insert(keys, {
+                "<leader>" .. i,
+                "<cmd>BufferLineGoToBuffer " .. i .. "<cr>",
+                desc = "Go to buffer " .. i
             })
         end
 
@@ -32,18 +32,14 @@ return {
             show_buffer_close_icons = false,
             show_close_icon = false,
             color_icons = true,
-
             numbers = "ordinal", -- "ordinal", "buffer_id"
             number_style = "superscript",
-
             diagnostics = "nvim_lsp",
             diagnostics_indicator = function(count, level)
                 local icon = level:match("error") and " " or " "
                 return " " .. icon .. count
             end,
-
             -- sort_by = 'extension',
-
             offsets = {
                 {
                     filetype = "neo-tree",
